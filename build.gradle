@@ -1,16 +1,16 @@
 apply plugin: 'java'
-apply plugin: 'eclipse-wtp' // �ǉ�
+apply plugin: 'eclipse-wtp' // 追加
 apply plugin: 'war'
 
 repositories {
     mavenCentral()
 }
 
-configurations { // �ǉ�
+configurations { // 追加
     compileOnly
 }
 
-sourceSets { // �ǉ�
+sourceSets { // 追加
   main {
     compileClasspath += configurations.compileOnly
   }
@@ -19,7 +19,7 @@ sourceSets { // �ǉ�
   }
 }
 
-eclipse { // �ǉ�
+eclipse { // 追加
   classpath {
     plusConfigurations += configurations.compileOnly
   }
@@ -27,7 +27,7 @@ eclipse { // �ǉ�
 
 dependencies {
     compile 'commons-collections:commons-collections:3.2.1'
-    compileOnly 'javax.servlet:javax.servlet-api:3.0.1' // �ǉ�
+    compileOnly 'javax.servlet:javax.servlet-api:3.0.1' // 追加
     testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
