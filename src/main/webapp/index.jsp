@@ -9,6 +9,6 @@
 </head>
 <body>
     Hello! Duke Gradle! <%= new Library() %>
-    修正しました。
+    修正しました。まだ修正です。
 </body>
 </html>
